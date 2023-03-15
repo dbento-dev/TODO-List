@@ -1,0 +1,56 @@
+.taskListItem {
+  width: 100%;
+  border: 1px solid #c7c4c4;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.taskListItemFirstRow,
+.taskListItemSecondRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.taskCategory {
+  font: 14px 'Poppins', sans-serif;
+  color: #343434;
+  font-weight: 300;
+  line-height: 21px;
+}
+
+.taskDescription {
+  font: 16px 'Poppins', sans-serif;
+  color: #343434;
+  font-weight: 300;
+  line-height: 24px;
+  overflow: hidden;
+
+  word-wrap: break-word;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.editButton,
+.deleteButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.editButton {
+  color: #0fba3f;
+}
+
+.deleteButton {
+  color: #e84118;
+}
