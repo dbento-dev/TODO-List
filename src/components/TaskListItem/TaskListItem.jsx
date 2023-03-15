@@ -4,12 +4,22 @@ import { FiEdit, FiTrash2 } from 'react-icons/fi'
 
 function TaskListItem(props) {
   const { title, category, date, description, deleteTask, editTask } = props
+
+  const dateObj = new Date(date)
+
+  const formattedDate = dateObj.toLocaleDateString('pt-BR', {
+    timeZone: 'UTC',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  })
+
   return (
     <li className={styles.taskListItem}>
       <h2 className={styles.taskListItemTitle}>{title}</h2>
       <div className={styles.taskListItemFirstRow}>
         <span className={styles.taskCategory}>{category}</span>
-        <strong>{date}</strong>
+        <strong>{formattedDate}</strong>
       </div>
 
       <div className={styles.taskListItemSecondRow}>
